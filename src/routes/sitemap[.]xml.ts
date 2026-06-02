@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import type {} from "@tanstack/react-start";
 import { products } from "@/data/products";
 
-const BASE_URL = "https://fuel-track-cosmos.lovable.app";
+const BASE_URL = "https://fueltracksfttpl.lovable.app";
 
 interface SitemapEntry {
   path: string;

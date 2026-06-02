@@ -159,7 +159,7 @@ export function ProductHero({ product }: { product: Product }) {
                     >
                       <img
                         src={src}
-                        alt={`Thumbnail ${i + 1}`}
+                        alt={`${product.name} — view ${i + 1} thumbnail`}
                         width={200}
                         height={200}
                         loading="lazy"

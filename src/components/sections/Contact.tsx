@@ -58,13 +58,14 @@ export function Contact() {
               <h3 className="text-xl font-semibold">Send us a message</h3>
               <form onSubmit={onSubmit} className="mt-6 space-y-4">
                 <div className="grid sm:grid-cols-2 gap-4">
-                  <Field label="Name" type="text" name="name" />
-                  <Field label="Phone" type="tel" name="phone" />
+                  <Field label="Name" type="text" name="name" id="contact-name" />
+                  <Field label="Phone" type="tel" name="phone" id="contact-phone" />
                 </div>
-                <Field label="Email" type="email" name="email" />
+                <Field label="Email" type="email" name="email" id="contact-email" />
                 <div>
-                  <label className="text-xs text-muted-foreground">Subject</label>
+                  <label htmlFor="contact-subject" className="text-xs text-foreground/80">Subject</label>
                   <select
+                    id="contact-subject"
                     name="subject"
                     required
                     defaultValue=""
@@ -78,12 +79,13 @@ export function Contact() {
                   </select>
                 </div>
                 <div>
-                  <label className="text-xs text-muted-foreground">Message</label>
+                  <label htmlFor="contact-message" className="text-xs text-foreground/80">Message</label>
                   <textarea
+                    id="contact-message"
                     name="message"
                     required
                     rows={4}
-                    className="mt-1 w-full rounded-xl bg-white/5 border border-white/10 px-4 py-3 text-sm focus:outline-none focus:border-primary/60 focus:ring-2 focus:ring-primary/20 transition-all resize-none"
+                    className="mt-1 w-full rounded-xl bg-white/5 border border-white/10 px-4 py-3 text-sm focus:outline-none focus:border-primary/60 focus:ring-2 focus:ring-primary/20 transition-all resize-none placeholder:text-foreground/50"
                     placeholder="Tell us about your fleet..."
                   />
                 </div>
@@ -176,11 +178,12 @@ export function Contact() {
   );
 }
 
-function Field({ label, type, name }: { label: string; type: string; name: string }) {
+function Field({ label, type, name, id }: { label: string; type: string; name: string; id: string }) {
   return (
     <div>
-      <label className="text-xs text-muted-foreground">{label}</label>
+      <label htmlFor={id} className="text-xs text-foreground/80">{label}</label>
       <input
+        id={id}
         type={type}
         name={name}
         required
