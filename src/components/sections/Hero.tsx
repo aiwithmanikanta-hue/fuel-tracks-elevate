@@ -45,7 +45,7 @@ export function Hero() {
               transition={{ duration: 0.9, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
               className="mt-6 text-4xl md:text-5xl lg:text-6xl font-bold leading-[0.98] text-gradient"
             >
-              FUEL TRACKS<br />TECHNOLOGIES<br /><span className="text-gradient-brand">PVT LTD</span>
+              Fuel Tracks Technologies<br /><span className="text-gradient-brand">Smart GPS & Fuel Monitoring</span>
             </motion.h1>
 
             <motion.p

@@ -16,8 +16,12 @@ export function Footer() {
               India's premium GPS-based vehicle tracking and fuel monitoring solutions. Fuel Monitoring Now Online.
             </p>
             <div className="mt-6 flex gap-2">
-              {[Linkedin, Twitter, Facebook].map((Icon, i) => (
-                <a key={i} href="#" aria-label="Social" className="size-9 grid place-items-center rounded-full border border-white/20 text-muted-foreground hover:text-primary hover:border-primary hover:scale-110 transition-all">
+              {[
+                { Icon: Linkedin, label: "Fuel Tracks on LinkedIn" },
+                { Icon: Twitter, label: "Fuel Tracks on Twitter" },
+                { Icon: Facebook, label: "Fuel Tracks on Facebook" },
+              ].map(({ Icon, label }) => (
+                <a key={label} href="#" aria-label={label} className="size-9 grid place-items-center rounded-full border border-white/20 text-muted-foreground hover:text-primary hover:border-primary hover:scale-110 transition-all">
                   <Icon className="size-4" />
                 </a>
               ))}
