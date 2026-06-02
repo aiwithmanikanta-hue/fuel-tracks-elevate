@@ -11,6 +11,7 @@ import { Industries } from "@/components/sections/Industries";
 import mapPinIcon from "@/assets/map-pin.png.asset.json";
 import fuelSensorIcon from "@/assets/fuel-sensor-icon.png.asset.json";
 import rfidIcon from "@/assets/rfid-icon-v2.png.asset.json";
+import fleetDeploymentImg from "@/assets/fleet-deployment.png.asset.json";
 
 export const Route = createFileRoute("/services")({
   head: () => ({
@@ -128,17 +129,18 @@ function ServicesPage() {
             </GlassCard>
             <GlassCard className="h-full overflow-hidden p-0">
               <div className="aspect-video relative bg-[oklch(0.18_0.05_250)]">
-                <div className="absolute inset-0 bg-grid opacity-20" />
-                <div className="absolute inset-0 bg-[var(--gradient-glow)] opacity-50" />
-                <div className="absolute inset-0 grid place-items-center text-primary">
-                  <motion.div animate={{ scale: [1, 1.05, 1] }} transition={{ duration: 4, repeat: Infinity }}>
-                    <Cpu className="size-24 opacity-50" />
-                  </motion.div>
-                </div>
-                <div className="absolute bottom-0 inset-x-0 p-4 text-xs text-muted-foreground">Live deployments across 28 states</div>
+                <img
+                  src={fleetDeploymentImg.url}
+                  alt="Diverse fleet — trucks, buses, ambulances and construction equipment connected via GPS tracking across India"
+                  className="absolute inset-0 w-full h-full object-cover"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+                <div className="absolute bottom-0 inset-x-0 p-4 text-xs text-white/90">Live deployments across 28 states</div>
               </div>
             </GlassCard>
           </Reveal>
+
         </div>
       </section>
 
