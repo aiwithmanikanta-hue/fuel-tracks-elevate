@@ -11,6 +11,7 @@ import { Industries } from "@/components/sections/Industries";
 import mapPinIcon from "@/assets/map-pin.png.asset.json";
 import fuelSensorIcon from "@/assets/fuel-sensor-icon.png.asset.json";
 import rfidIcon from "@/assets/rfid-icon-v2.png.asset.json";
+import fleetDeploymentImg from "@/assets/fleet-deployment.png.asset.json";
 
 export const Route = createFileRoute("/services")({
   head: () => ({
