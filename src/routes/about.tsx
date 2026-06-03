@@ -105,7 +105,7 @@ function AboutPage() {
             <div className="relative aspect-[4/5] rounded-3xl p-6 shadow-elegant overflow-hidden ring-1 ring-primary/20" style={{ background: "#BFDFFF" }}>
               <div className="absolute inset-1 rounded-3xl bg-background/40 backdrop-blur-sm" />
               <img
-                src={indiaMap}
+                src={indiaMap.url}
                 alt="Fuel Tracks pan-India coverage map"
                 loading="lazy"
                 className="relative w-full h-full object-contain"
